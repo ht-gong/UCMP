@@ -5,8 +5,8 @@ import pickle
 species = ("50",)
 with open('loading/BE.pickle', 'rb') as file:
     penguin_means = pickle.load(file)
-for key in penguin_means:
-    print("{}: {:.4f}".format(key, penguin_means[key]))
+#for key in penguin_means:
+    #print("{}: {:.4f}".format(key, penguin_means[key]))
 
 with open('loading/config.pickle', "rb") as file:
     config = pickle.load(file)
