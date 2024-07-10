@@ -1,4 +1,4 @@
-# Ripple-sim
+# UCMP-sim
 Packet-level simulation code for SIGCOMM 2024 paper (UCMP) "Uniform-Cost Multi-Path Routing for Reconfigurable Data Center Networks"
 
 ## Requirements:
