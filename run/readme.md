@@ -4,6 +4,7 @@
     The output would be the time elapsed from the start of the simulation in miliseconds. Each simulation should finish when this output approaches 800ms.
 
 2. Each simulation takes from 5~6 hours to 2 days to complete, depending on the configuration and workload. One may want to execute them in parallel to save time, but be careful to monitor the memory usage, especially for the *datamining* simulations -- we observed that memory consumption grew up to 100GBs for a few runs.
+    - We have marked these runs with comments in the runs.sh files.
 
 3. All settings for plotting figures are in first created in set_config.py. They are configured to work out-of-the box. We specify the settings first then use others scripts, i.e., FCT.py, BE_BAR.py to generate the figures.
 
