@@ -183,12 +183,12 @@ void BoltQueue::beginService() {
     simtime_picosec finish_time = eventlist().now()+drainTime(_enqueued[_crt_tx_slice].back());
     int finish_slice = _top->time_to_slice(finish_time);
     if(_top->is_reconfig(finish_time) && _port >= _top->no_of_hpr()) {
-      cout << "hello world\n";
+      //cout << "hello world\n";
       finish_slice = _top->absolute_logic_slice_to_slice(finish_slice + 1);
     }
     if (finish_slice != _crt_tx_slice && !_top->is_downlink(_port)) {
       Packet *pkt = _enqueued[_crt_tx_slice].back();
-      cout << "debug packet earlyfb? " << pkt->early_fb() << " TcpData? " << (pkt->type() == TCP) << " remaining " << _queuesize[_crt_tx_slice] << " slices " << finish_slice << " " << _crt_tx_slice << endl;
+      //cout << "debug packet earlyfb? " << pkt->early_fb() << " TcpData? " << (pkt->type() == TCP) << " remaining " << _queuesize[_crt_tx_slice] << " slices " << finish_slice << " " << _crt_tx_slice << endl;
       //assert(0);
     } else {
       //cout << "beginService " << _tor << " " << _port << " id " << current_event_id << " slice " << _crt_tx_slice << endl;

@@ -74,14 +74,6 @@ uint64_t Pipe::reportBytesPassedThrough() {
 
 void Pipe::sendFromPipe(Packet *pkt) {
     //cout << "sendFromPipe" << endl;
-          if(pkt->id() == 2979155) {
-                    DynExpTopology* top = pkt->get_topology();
-        cout << "DEBUG pipe " << pkt->get_crtslice() << " " << top->time_to_logic_slice(eventlist().now()) << " " << pkt->get_crtport() << endl;
-        }
-          if(pkt->id() == 2980467) {
-                    DynExpTopology* top = pkt->get_topology();
-        cout << "DEBUG EFB pipe " << pkt->get_crtslice() << " " << top->time_to_logic_slice(eventlist().now()) << " " << pkt->get_crtport() << endl;
-        }
     _bytes_passed_through += pkt->size();
     if (pkt->is_lasthop()) {
         //cout << "LAST HOP\n";
