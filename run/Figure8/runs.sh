@@ -3,33 +3,10 @@
 #get relative path
 PARENT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$PARENT_PATH"
-
-SIMTIME=${1:-0.8} #default simtime 0.8s
-SIMTIME_FULL=${SIMTIME}01 #always add slighly more
-SIMTIME_MS=$(echo $SIMTIME*1000 | bc) #to check for simtime inside output file
+source ../run_util.sh
 
 SUCCESS=true
 FILES=()
-
-check_res() {
-    if ! grep Util $FNAME | grep -q $SIMTIME_MS; then
-        echo "Failed to run $FNAME, file is incomplete!"
-        SUCCESS=false
-    else
-        echo "Successfully finished running $FNAME!"
-    fi
-}
-
-run_sim () {
-echo "Checking for ${FNAME}..."
-if ! [[ -e $FNAME ]] || ! grep Util $FNAME | grep -q $SIMTIME_MS; then
-    echo "Running ${FNAME}..."
-    eval $COMMAND
-    check_res
-else
-    echo "Found complete ${FNAME}, skipping."
-fi
-}
 
 echo "Running simulations for ${SIMTIME_FULL}s simtime"
 printf "\n"
