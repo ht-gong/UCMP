@@ -1,4 +1,4 @@
-# Ripple-sim
+# UCMP-sim
 Packet-level simulation code for SIGCOMM 2024 paper (UCMP) "Uniform-Cost Multi-Path Routing for Reconfigurable Data Center Networks"
 
 ## Requirements:
@@ -60,5 +60,5 @@ Packet-level simulation code for SIGCOMM 2024 paper (UCMP) "Uniform-Cost Multi-P
   <src_host> <dst_host> <flow_size_bytes> <flow_start_time_nanosec> /newline
   ```
   - If you want to generate them manually, run /traffic/generate_websearch_traffic.m, then run write_to_htsim_file.m
-- Specify the simulation parameters and run (e.g. run /Figure8/run.sh).
+- Specify the simulation parameters and run (e.g. run /Figure8/runs.sh).
 - Plot the post-processed data (e.g. run /Figure8/set_config.py and then run FCT.py)

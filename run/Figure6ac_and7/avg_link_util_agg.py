@@ -30,8 +30,7 @@ colors, markers, endpoint = config["colors"], config["markers"], config["endpoin
 set_times, set_tor_host_util, set_tor_tor_util = [], [], []
 
 for i in range(len(file_names)):
-    #with open('../../run/results/' + folder_name + file_names[i] + '.txt', 'r') as file:
-    with open(folder_name + file_names[i] + '.txt', 'r') as file:
+    with open(folder_name + file_names[i], 'r') as file:
         pipes = defaultdict(list)
         times = np.zeros(0)
         for line in file.readlines():
@@ -49,7 +48,7 @@ for i in range(len(file_names)):
         assert len(pipes[(0, 6)]) == len(times)
         tor_host_util = np.zeros(len(times))
         tor_tor_util = np.zeros(len(times))
-        print(f"{labels[i]}. Total samples: {len(times)}")
+        #print(f"{labels[i]}. Total samples: {len(times)}")
         for t in range(len(times)):
             arr = []
             for tor in range(N_ToR):
