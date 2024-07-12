@@ -7,7 +7,7 @@ FILES=()
 display_help() {
     echo "Syntax: $0 [options]"
     echo "-h            Display this help message."
-    echo "-s simtime    Run simulations for simtime ms (default: 0.8)."
+    echo "-s simtime    Run simulations for simtime seconds (default: 0.8)."
     echo "-o            Force rerun and override of existing complete output files."
     echo "-f            Do not look for existing complete output files from other directories."
 }
@@ -38,17 +38,17 @@ find_and_copy() {
 }
 
 run_sim () {
-echo "Checking for ${FNAME}..."
-if [[ $OVERRIDE = true ]] || ! [[ -e $FNAME ]] || ! grep Util $FNAME | grep -q $SIMTIME_MS; then
-    find_and_copy
-    if [[ $? -eq 1 ]]; then
-        echo "Running ${FNAME}..."
-        eval $COMMAND
-        check_res
+    echo "Checking for ${FNAME}..."
+    if [[ $OVERRIDE = true ]] || ! [[ -e $FNAME ]] || ! grep Util $FNAME | grep -q $SIMTIME_MS; then
+        find_and_copy
+        if [[ $? -eq 1 ]]; then
+            echo "Running ${FNAME}..."
+            eval $COMMAND
+            check_res
+        fi
+    else
+        echo "Found complete ${FNAME}, skipping."
     fi
-else
-    echo "Found complete ${FNAME}, skipping."
-fi
 }
 
 #get options and set all arguments
