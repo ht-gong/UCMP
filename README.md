@@ -2,10 +2,10 @@
 Packet-level simulation code for SIGCOMM 2024 paper (UCMP) "Uniform-Cost Multi-Path Routing for Reconfigurable Data Center Networks"
 
 ## Table of contents
-1. [Requirements and reference hardware](#requirements)
+1. [Requirements and reference hardware](#requirements-and-reference-hardware)
 2. [Description](#description)
-3. [Running the simulations and reproducing the results](#running)
-4. [Generating topologies and flow files](#generating)
+3. [Running the simulations and reproducing the results](#running-the-simulations-and-reproducing-the-results)
+4. [Generating topologies and flow files](#generating-topologies-and-flow-files)
 
 ## Requirements and reference hardware
 
