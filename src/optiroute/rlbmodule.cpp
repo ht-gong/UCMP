@@ -708,9 +708,6 @@ void RlbMaster::newMatching() {
     // first, get the current "superslice"
     int slice = _top->time_to_slice(eventlist().now());
 
-    if (slice == 0) {
-        cout << "DEBUG1\tSLICE TIME: " << timeAsMs(eventlist().now()) << endl;
-    }
 
 
     // debug:
@@ -904,7 +901,7 @@ void RlbMaster::newMatching() {
     // set up the next reconfiguration event:
     eventlist().sourceIsPendingRel(*this, _top->get_slice_time());
     //cout << "get_slice_time " << _top->get_slice_time() << endl;
-    cout << "sent " << sent_in_match << " p1_1 " << sent_phase1_1 << " p1_2 " << sent_phase1_2 << " p3 " << sent_phase3 << " acc " << tot_accepts << " prop " << tot_proposals << " caps " << tot_link_caps_send << " abss " << _top->time_to_absolute_slice(eventlist().now()) << " t " << eventlist().now() << endl;
+    //cout << "sent " << sent_in_match << " p1_1 " << sent_phase1_1 << " p1_2 " << sent_phase1_2 << " p3 " << sent_phase3 << " acc " << tot_accepts << " prop " << tot_proposals << " caps " << tot_link_caps_send << " abss " << _top->time_to_absolute_slice(eventlist().now()) << " t " << eventlist().now() << endl;
 }
 
 

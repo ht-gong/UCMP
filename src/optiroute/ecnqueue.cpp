@@ -261,12 +261,12 @@ void ECNQueue::beginService() {
     if(!top->is_downlink(_port) && finish_push_slice != _crt_tx_slice) {
         // Uplink port attempting to serve pkt across configurations
         #ifdef DEBUG
-        cout<<"Uplink port attempting to serve pkt across configurations\n";
+        //cout<<"Uplink port attempting to serve pkt across configurations\n";
         #endif
         Packet *pkt = _enqueued[_crt_tx_slice].back();
-        cout << "debug packet earlyfb? " << pkt->early_fb() << " TcpData? " << (pkt->type() == TCP) << " remaining " << _queuesize[_crt_tx_slice] << " slices " << finish_push_slice << " " << _crt_tx_slice << " pktid " << pkt->id() << endl;
+        // cout << "debug packet earlyfb? " << pkt->early_fb() << " TcpData? " << (pkt->type() == TCP) << " remaining " << _queuesize[_crt_tx_slice] << " slices " << finish_push_slice << " " << _crt_tx_slice << " pktid " << pkt->id() << endl;
         // assert(0);
-        cout<<"Uplink port attempting to serve pkt across configurations\n";
+        //cout<<"Uplink port attempting to serve pkt across configurations\n";
         _sending_pkt = NULL;
         if(_queuesize_rlb > 0) {
             _sending_pkt = _enqueued_rlb.back();
@@ -318,7 +318,7 @@ void ECNQueue::beginService() {
     }
     if (finish_slice != _crt_tx_slice && !_top->is_downlink(_port)) {
       Packet *pkt = _enqueued[_crt_tx_slice].back();
-      cout << "debug packet earlyfb? " << pkt->early_fb() << " TcpData? " << (pkt->type() == TCP) << " remaining " << _queuesize[_crt_tx_slice] << " slices " << finish_slice << " " << _crt_tx_slice << endl;
+      //cout << "debug packet earlyfb? " << pkt->early_fb() << " TcpData? " << (pkt->type() == TCP) << " remaining " << _queuesize[_crt_tx_slice] << " slices " << finish_slice << " " << _crt_tx_slice << endl;
       //assert(0);
     } else {
       //cout << "beginService " << _tor << " " << _port << " id " << current_event_id << " slice " << _crt_tx_slice << endl;
@@ -515,12 +515,6 @@ ECNQueue::completeService()
     
     _queuesize[_crt_tx_slice] -= _sending_pkt->size();
 
-    if(_sending_pkt->id() == 2979155) {
-      cout << "DEBUG completeService " << _tor << " " << _port << " crt_slice " << _crt_tx_slice << endl; 
-  }
-    if(_sending_pkt->id() == 2980467) {
-      cout << "DEBUG EFB completeService " << _tor << " " << _port << " crt_slice " << _crt_tx_slice << " pktslice " << _sending_pkt->get_crtslice() << " hop " << _sending_pkt->get_hop_index() << endl;
-  }
     sendFromQueue(_sending_pkt);
     _sending_pkt = NULL;
     _is_servicing = false;

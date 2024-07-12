@@ -248,18 +248,6 @@ simtime_picosec Routing::routing_from_ToR_Expander(Packet* pkt, simtime_picosec 
             pkt->set_src_ToR(top->get_nextToR(cur_slice, pkt->get_crtToR(), pkt->get_crtport()));
             pkt->set_path_index(get_path_index(pkt, finish_time));
             pkt->set_hop_index(-1);
-          if(pkt->id() == 2979155) {
-        cout << "DEBUG fail routing\n";
-        }
-          if(pkt->id() == 2980467) {
-        cout << "DEBUG EFB fail routing\n";
-        }
-        }
-          if(pkt->id() == 2979155) {
-        cout << "DEBUG routing " << cur_slice << " " << cur_slice_port << endl;
-        }
-          if(pkt->id() == 2980467) {
-        cout << "DEBUG EFB routing " << cur_slice << " " << cur_slice_port << endl;
         }
         return finish_time;
     } else {
@@ -463,9 +451,7 @@ void QueueAlarm::doNextEvent(){
 #endif
 
     if(_queue->slice_queuesize(_queue->_crt_tx_slice) > 0) {
-        std::cout << "Packets " << _queue->slice_queuesize(_queue->_crt_tx_slice)/1436 << 
-            " stuck in queue tor " << _queue->_tor << " port " << _queue->_port << " slice " << _queue->_crt_tx_slice << endl;
-	_queue->handleStuck();
+	    _queue->handleStuck();
     }
 
     // cout << "QueueAlarmUtil" << fixed << " " << timeAsMs(eventlist().now()) << endl;

@@ -718,9 +718,6 @@ void RlbMaster::newMatching() {
     else
         slice = 2 + superslice*3;
 
-    if (slice == 0) {
-        cout << "DEBUG1\tSLICE TIME: " << timeAsMs(eventlist().now()) << endl;
-    }
 
     // debug:
     //cout << "-*-*- New matching at slice = " << slice << ", time = " << timeAsUs(eventlist().now()) << " us -*-*-" << endl;

@@ -48,7 +48,7 @@ int SentPackets::get_data_seq(uint64_t seq, uint64_t* dseq){
     t = (t+1)%size;
   }
 
-  cout << "Didn't find packet in sent list! Seq No: " << seq << " First Sent " << sub_seq[crt_start] << "[" << data_seq[crt_start] <<"] Last Sent " << sub_seq[crt_end-1] << "["<< data_seq[crt_end-1] << "] start pos " << crt_start << " end pos " << crt_end << " count " << crt_count <<endl;
+  //cout << "Didn't find packet in sent list! Seq No: " << seq << " First Sent " << sub_seq[crt_start] << "[" << data_seq[crt_start] <<"] Last Sent " << sub_seq[crt_end-1] << "["<< data_seq[crt_end-1] << "] start pos " << crt_start << " end pos " << crt_end << " count " << crt_count <<endl;
   return 0;
 }
 
