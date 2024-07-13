@@ -41,8 +41,8 @@ for i in range(len(file_names)):
 
     legends.append(line)
 
-ax.set_xlim([0.3e4, 1e9])
-ax.set_ylim([0.5e1, 2e6])
+ax.set_xlim([0.5e2, 2e9])
+ax.set_ylim([0.3e1, 2e7])
 ax.set_xscale('log')
 ax.set_yscale('log')
 
