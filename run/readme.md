@@ -31,7 +31,7 @@ After all simulations are done running, figures will be plotted in `figures/`.
 You can check all available options using `runs.sh -h`.
 
 As simulations are large scale, some can take up to several days to finish while requiring 100GB+ ram.
-We provide a rough time estimation and resource requirement for each of them on our hardware if running with the default setting (i.e., no parameters provided to `runs.sh`). These are included in this [section](#estimation-of-running-time-and memory-consumption).
+We provide a rough time estimation and resource requirement for each of them on our hardware if running with the default setting (i.e., no parameters provided to `runs.sh`). These are included in this [section](###estimation-of-running-time-and memory-consumption).
 
 
 What we **strongly recommend** instead is to run the simulations for a shorter amount of time.
