@@ -62,6 +62,8 @@ double Routing::get_pkt_priority(NdpSrc* ndp_src) {
         #endif
 	if(_options & ROUTING_OPT_AGING) {
 	    return (double) ndp_src->get_flowsize()-ndp_src->get_remaining_flowsize();
+	} else if (_options & ROUTING_OPT_ALPHA0) {
+            return 0.0;
 	} else {
 	    return (double) ndp_src->get_flowsize();
 	}

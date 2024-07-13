@@ -2,11 +2,6 @@ import itertools
 import os
 import pickle
 import shutil
-import sys
-
-end_point = int(float(sys.argv[1])) #first argument is end_time
-end_point = min(end_point, 500)
-file_names = sys.argv[2:]
 
 palette = {
     (1, 1): [231, 215, 188], (1, 2): [250, 225, 221], (1, 3): [215, 179, 137], (1, 4): [219, 227, 238],
@@ -30,7 +25,12 @@ markers = itertools.cycle(('o', '^', 's', 'd', 'p', 'v'))
 
 config = {
     "folder_name": "",
-    "file_names": file_names,
+    "file_names": [
+        "OptiRoute_websearch_dctcp_0.5sec_0.8sec_1us",
+        "OptiRoute_websearch_dctcp_0.5sec_0.8sec_10us",
+        "OptiRoute_websearch_dctcp_0.5sec_0.8sec_50us",
+        "OptiRoute_websearch_dctcp_0.5sec_0.8sec_300us",
+    ],
     "labels": [
         r'1 $\mu s$',
         r'10 $\mu s$',
@@ -39,7 +39,7 @@ config = {
     ],
     "colors": colors,
     "markers": markers,
-    "endpoint": end_point,
+    "endpoint": 500,
     "suffix": "pdf",
 }
 
