@@ -163,55 +163,55 @@ These numbers are grouped by figures, and measured on our server with Intel(R) X
 Figure 6ac and 7
 | Run Name                                    | Time  | RAM  |
 |---------------------------------------------|-------|------|
-| OptiRoute_websearch_ndp, Sim time 0.5sec    | 10hrs | 3GB  |
-| OptiRoute_websearch_dctcp, Sim time 0.5sec  | 10hrs | 3GB  |
-| Opera_5paths_websearch_ndp, Sim time 0.5sec | 15hrs | 3GB  |
-| Opera_1path_websearch_ndp, Sim time 0.5sec  | 15hrs | 3GB  |
-| VLB_websearch_rotorlb, Sim time 0.5sec      | 10hrs | 3GB  |
-| ksp_topK=1_websearch_dctcp, Sim time 0.5sec | 10hrs | 3GB  |
-| ksp_topK=5_websearch_dctcp, Sim time 0.5sec | 10hrs | 3GB  |
+| OptiRoute_websearch_ndp, SIMTIME 0.8sec    | 10hrs | 3GB  |
+| OptiRoute_websearch_dctcp, SIMTIME 0.8sec  | 10hrs | 3GB  |
+| Opera_5paths_websearch_ndp, SIMTIME 0.8sec | 15hrs | 3GB  |
+| Opera_1path_websearch_ndp, SIMTIME 0.8sec  | 15hrs | 3GB  |
+| VLB_websearch_rotorlb, SIMTIME 0.8sec      | 10hrs | 3GB  |
+| ksp_topK=1_websearch_dctcp, SIMTIME 0.8sec | 10hrs | 3GB  |
+| ksp_topK=5_websearch_dctcp, SIMTIME 0.8sec | 10hrs | 3GB  |
 
 Figure 6bd
 | Run Name                                    | Time  | RAM  |
 |---------------------------------------------|-------|------|
-| OptiRoute_datamining_ndp, Sim time 0.5sec    | 10hrs | **100GB**  |
-| OptiRoute_datamining_dctcp, Sim time 0.5sec  | 10hrs | **100GB**   |
-| Opera_5paths_datamining_ndp, Sim time 0.5sec | 15hrs | **100GB**   |
-| Opera_1path_datamining_ndp, Sim time 0.5sec  | 15hrs | **100GB**   |
-| VLB_datamining_rotorlb, Sim time 0.5sec      | 10hrs | **80GB**   |
-| ksp_topK=1_datamining_dctcp, Sim time 0.5sec | 10hrs | **80GB**   |
-| ksp_topK=5_datamining_dctcp, Sim time 0.5sec | 10hrs | **80GB**   |
+| OptiRoute_datamining_ndp, SIMTIME 0.8sec    | 10hrs | **100GB**  |
+| OptiRoute_datamining_dctcp, SIMTIME 0.8sec  | 10hrs | **100GB**   |
+| Opera_5paths_datamining_ndp, SIMTIME 0.8sec | 15hrs | **100GB**   |
+| Opera_1path_datamining_ndp, SIMTIME 0.8sec  | 15hrs | **100GB**   |
+| VLB_datamining_rotorlb, SIMTIME 0.8sec      | 10hrs | **80GB**   |
+| ksp_topK=1_datamining_dctcp, SIMTIME 0.8sec | 10hrs | **80GB**   |
+| ksp_topK=5_datamining_dctcp, SIMTIME 0.8sec | 10hrs | **80GB**   |
 
 Figure 8
 
 | Run Name                                    | Time  | RAM  |
 |---------------------------------------------|-------|------|
-| OptiRoute_websearch_dctcp, Sim time 0.5sec    | 10hrs | 3GB  |
-| OptiRoute_websearch_dctcp_aging, Sim time 0.5sec  | 10hrs | 3GB   |
+| OptiRoute_websearch_dctcp, SIMTIME 0.8sec    | 10hrs | 3GB  |
+| OptiRoute_websearch_dctcp_aging, SIMTIME 0.8sec  | 10hrs | 3GB   |
 
 
 Figure 9
 
 | Run Name                                    | Time  | RAM  |
 |---------------------------------------------|-------|------|
-| OptiRoute_websearch_dctcp_cfg_10ns, Sim time 0.5sec    | 10hrs | 3GB  |
-| OptiRoute_websearch_dctcp_cfg_1us, Sim time 0.5sec  | 10hrs | 3GB   |
-| OptiRoute_websearch_dctcp_cfg_10us, Sim time 0.5sec  | 10hrs | 3GB   |
+| OptiRoute_websearch_dctcp_cfg_10ns, SIMTIME 0.8sec    | 10hrs | 3GB  |
+| OptiRoute_websearch_dctcp_cfg_1us, SIMTIME 0.8sec  | 10hrs | 3GB   |
+| OptiRoute_websearch_dctcp_cfg_10us, SIMTIME 0.8sec  | 10hrs | 3GB   |
 
 
 Figure 10
 
 | Run Name                                    | Time  | RAM  |
 |---------------------------------------------|-------|------|
-| OptiRoute_websearch_dctcp_alpha_0.3, Sim time 0.5sec  | 10hrs | 3GB  |
-| OptiRoute_websearch_dctcp_alpha_0.5, Sim time 0.5sec  | 10hrs | 3GB   |
-| OptiRoute_websearch_dctcp_alpha_0.7, Sim time 0.5sec  | 10hrs | 3GB   |
+| OptiRoute_websearch_dctcp_alpha_0.3, SIMTIME 0.8sec  | 10hrs | 3GB  |
+| OptiRoute_websearch_dctcp_alpha_0.5, SIMTIME 0.8sec  | 10hrs | 3GB   |
+| OptiRoute_websearch_dctcp_alpha_0.7, SIMTIME 0.8sec  | 10hrs | 3GB   |
 
 Figure 11
 
 | Run Name                                    | Time  | RAM  |
 |---------------------------------------------|-------|------|
-| OptiRoute_websearch_dctcp_slice_1us, Sim time 0.5sec  | **80hrs** | 3GB  |
-| OptiRoute_websearch_dctcp_slice_10us, Sim time 0.5sec  | 10hrs | 3GB   |
-| OptiRoute_websearch_dctcp_slice_50us, Sim time 0.5sec  | 8hrs | 3GB   |
-| OptiRoute_websearch_dctcp_slice_300us, Sim time 0.5sec  | 6hrs | 3GB   |
+| OptiRoute_websearch_dctcp_slice_1us, SIMTIME 0.8sec  | **80hrs** | 3GB  |
+| OptiRoute_websearch_dctcp_slice_10us, SIMTIME 0.8sec  | 10hrs | 3GB   |
+| OptiRoute_websearch_dctcp_slice_50us, SIMTIME 0.8sec  | 8hrs | 3GB   |
+| OptiRoute_websearch_dctcp_slice_300us, SIMTIME 0.8sec  | 6hrs | 3GB   |
