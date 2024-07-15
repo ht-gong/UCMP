@@ -15,7 +15,7 @@ legends = []
 for i in range(len(file_names)):
     flows = defaultdict(list)
     #with open('../../run/results/' + folder_name + file_names[i] + '.txt', 'r') as file:
-    with open(folder_name + file_names[i] + '.txt', 'r') as file:
+    with open(folder_name + file_names[i], 'r') as file:
         for line in file.readlines():
             line = line.split()
             if len(line) <= 0:
@@ -30,7 +30,6 @@ for i in range(len(file_names)):
     FCTs = []
     for flow_size in flow_sizes:
         FCTs.append(np.percentile(flows[flow_size], 99))
-    print(FCTs)
 
     marker = None
     #linestyles = ['-', '--']
