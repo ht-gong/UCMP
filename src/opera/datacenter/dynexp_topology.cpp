@@ -64,6 +64,10 @@ pair<int, int> DynExpTopology::get_direct_routing(int srcToR, int dstToR, int sl
 void DynExpTopology::read_params(string topfile) {
 
   ifstream input(topfile);
+  if(input.fail()) {
+    cerr << "Failed to open " << topfile << endl;
+    exit(1);
+  }
 
   if (input.is_open()){
 

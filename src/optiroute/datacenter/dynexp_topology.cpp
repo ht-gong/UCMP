@@ -55,6 +55,10 @@ DynExpTopology::DynExpTopology(mem_b queuesize, Logfile* lg, EventList* ev,queue
 void DynExpTopology::read_params(string topfile) {
 
   ifstream input(topfile);
+  if(input.fail()) {
+    cerr << "Failed to open " << topfile << endl;
+    exit(1);
+  }
 
   if (input.is_open()){
 

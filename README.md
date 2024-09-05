@@ -62,6 +62,12 @@ The executables will be built in the `datacenter/` subdirectories.
 
 ## Running the simulations and reproducing the results
 
+### Getting the topology files
+
+We use several topology files in our simulations, which are stored in `topologies/` (please refer to the README file there for more information).
+While most of them are small enough to fit the repository, `dynexp_50us_10nsrc_5paths.txt` is missing because its size exceeds the limit imposed by GitHub.
+In order to run all simulations, it should be manually downloaded from `https://drive.google.com/file/d/1B7F3yTlNVO7C7kCwY9ym055iDyM8XVNq/view` and copied to `topologies/`.
+
 ### Running the simulations via automated script
 
 The most straight-forward way to reproduce a particular figure is to run the `runs.sh` script in the corresponding figure directory.
